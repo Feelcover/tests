@@ -9,5 +9,11 @@ describe("validateValue", () => {
     }),
     test("Больше корректного", () =>{
         expect(validateValue(110)).toBe(false);
+    }),
+    test("Нижняя граница", () =>{
+        expect(validateValue(0)).toBe(true);
+    }),
+    test("Верхняя граница", () =>{
+        expect(validateValue(100)).toBe(true);
     })
 })
